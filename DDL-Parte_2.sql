@@ -17,6 +17,20 @@ create table matricula (
     foreign key (id_aluno) references alunos(id_aluno)
 );
 
+alter table alunos 
+add column endereco varchar(150),
+add column telefone varchar(20);
+
+alter table aluno
+drop column endereco;
+
+alter table aluno
+modify column email varchar(150) not null;
+
+truncate table aluno;
+
+show tables;
+
 rename table alunos to aluno;
 
 drop database escola;
